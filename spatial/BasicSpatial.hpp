@@ -88,9 +88,6 @@ class BasicSpatial : public SpatialBase<Point> {
       it++;
     }
 
-    std::cerr << cur_best_point.get(0) << " " << cur_best_point.get(1)
-              << std::endl;
-
     return cur_best_point;
   }
 };
