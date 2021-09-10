@@ -11,13 +11,13 @@ using distance_t = double;
 template <typename DataType, std::size_t DIM>
 class Point {
  public:
-  Point() { std::fill_n(_values, DIM, DataType(0)); }
+  Point() {  }
 
   Point(const std::array<DataType, DIM>& init_array) : _values(init_array) {}
 
   bool operator==(const Point<DataType, DIM>& p) const;
   distance_t distance(const Point<DataType, DIM>& p) const;
-
+  
   DataType get(std::size_t pos) const { return _values.at(pos); }
 
   std::size_t size() { return DIM; }
